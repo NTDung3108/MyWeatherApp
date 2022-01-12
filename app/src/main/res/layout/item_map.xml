@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_round">
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Hà Nội"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+    <TextView
+        android:id="@+id/txtMTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thus, May 6, 2021"
+        android:layout_below="@+id/txtLocation"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtMTime"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/imgMWeather"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/art_clear"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtMWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:layout_toEndOf="@+id/imgMWeather"
+                android:layout_below="@+id/txtMTime"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:id="@+id/txtMTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imgMWeather"
+                android:layout_below="@id/txtMWeather"
+                android:layout_centerHorizontal="true"
+                android:text="25°C"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/txtMMinMaxTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25°C/20°C"
+            android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/txtMFeelsLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cảm thấy như 27°C"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_below="@+id/linear1"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgHumidity"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/condensation"/>
+            <TextView
+                android:id="@+id/txtMHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45%"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:id="@+id/imgCloud"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/clouds" />
+            <TextView
+                android:id="@+id/txtMCloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45%"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgWind"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/wind" />
+            <TextView
+                android:id="@+id/txtMWind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45%"
+                android:textSize="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
